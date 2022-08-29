@@ -1,0 +1,6 @@
+1089 3600 1681 3600 
+1681 1681 3136 5184 
+1089 1681 5184 5184 
+1089 3136 3600 1089 
+
+The sum of the diagonal elements of the matrix is 9043
