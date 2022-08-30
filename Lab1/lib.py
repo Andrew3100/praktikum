@@ -16,14 +16,16 @@ def get_matrix(cortage):
 # функция пишет матрицу и сумму диагонали в файл
 def write_data_in_file(matrix):
     sum = 0
+    length = len(matrix)
     my_file = open("Scriptdata.txt", "w+")
     for i in range(0, len(matrix) - 1):
         for j in range(0, len(matrix[i]) - 1):
             if i == j:
-               sum += matrix[i][j]
-            my_file.write(str(matrix[i][j]) + " ")
+                sum += matrix[i][j] * length
+            content = str(matrix[i][j] * length) + " "
+            my_file.write(content)
+            # пишем в строку матрицу, умноженную на её порядок
         my_file.write("\n")
     my_file.write("\nThe sum of the diagonal elements of the matrix is " + str(sum))
-
     my_file.close()
 
